@@ -14,15 +14,18 @@ let random = tweets[Math.floor(Math.random() * tweets.length)];
 let message = random.tweet.slice(0, random.tweet.indexOf('☯') - 1);
 let date = random.tweet.slice(random.tweet.indexOf('☯') + 1);
 
-// Wrap text so it looks nice
-let output = monowrap(message + '\n - ' + date, {
-  width: 30
-})
-
 if (argv.cow) {
+  let output = monowrap(message + '\n - ' + date, {
+    width: 30
+  });
+
   console.log(cowsay.say({
     text: output
   }));
 } else {
+  let output = monowrap(message + '\n - ' + date, {
+    width: 80
+  });
+
   console.log(output);
 }
