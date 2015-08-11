@@ -1,0 +1,23 @@
+{
+  "name": "wwwtxt",
+  "version": "1.0.0",
+  "description": "Unix fortune, but with early internet posts",
+  "bin": {
+    "wwwtxt": "build/index.js"
+  },
+  "main": "build/index.js",
+  "scripts": {
+    "test": "test",
+    "compile": "babel -d build/ source/",
+    "build": "npm run compile; node build/index.js",
+    "prepublish": "npm run compile"
+  },
+  "keywords": [
+    "wwwtxt"
+  ],
+  "author": "Juan Soto",
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^5.8.21"
+  }
+}
