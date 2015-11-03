@@ -22,7 +22,7 @@ getRandomTweet()
       }));
     } else {
       let output = monowrap(tweet, {
-        width: 80
+        width: process.stdout.columns
       });
 
       console.log(output);
