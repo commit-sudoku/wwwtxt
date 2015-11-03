@@ -7,7 +7,16 @@
 npm install -g wwwtxt
 ```
 
+or
+
+```
+npm install wwwtxt
+```
+
 ## Usage
+
+### Global install
+
 ```
 wwwtxt
 ```
@@ -19,6 +28,17 @@ wwwtxt --cow
 ```
 
 Will print a random tweet using [cowsay](https://www.npmjs.com/package/cowsay)
+
+### Module install
+
+```javascript
+var getRandomTweet = require('wwwtxt');
+
+getRandomTweet()
+  .then((tweet) => {
+    console.log(tweet);
+  });
+```
 
 ## Why?
 

@@ -1,19 +1,25 @@
 {
   "name": "wwwtxt",
-  "version": "1.1.1",
+  "version": "2.0.0",
   "description": "Unix fortune, but with early internet posts",
   "bin": {
-    "wwwtxt": "build/index.js"
+    "wwwtxt": "bin/wwwtxt"
   },
-  "main": "build/index.js",
+  "engines": {
+    "node": ">=4.2.0"
+  },
+  "main": "index.js",
   "scripts": {
-    "test": "test",
-    "compile": "babel -d build/ source/",
-    "build": "npm run compile; node build/index.js",
-    "prepublish": "npm run compile"
+    "test": "semistandard && ava"
   },
   "keywords": [
     "wwwtxt"
+  ],
+  "files": [
+    "index.js",
+    "utils.js",
+    "bin/",
+    "tweets.json"
   ],
   "repository": {
     "type": "git",
@@ -22,11 +28,15 @@
   "author": "Juan Soto",
   "license": "MIT",
   "devDependencies": {
-    "babel": "^5.8.21"
+    "ava": "^0.3.0",
+    "semistandard": "^7.0.2"
   },
   "dependencies": {
     "cowsay": "^1.1.1",
     "monowrap": "^1.0.4",
     "yargs": "^3.18.0"
+  },
+  "semistandard": {
+    "ignore": ["test.js"]
   }
 }
