@@ -2,7 +2,7 @@ import test from 'ava';
 import path from 'path';
 import fs from 'fs';
 import getRandomTweet from './index';
-import cleanUpTweet from './utils';
+import cleanUpTweet from './lib/utils';
 import childProcess from 'child_process';
 
 test('getRandomTweet', (t) => {

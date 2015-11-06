@@ -4,7 +4,7 @@
 const cowsay = require('cowsay');
 const monowrap = require('monowrap');
 const getRandomTweet = require('../index');
-const cleanUpTweet = require('../utils');
+const cleanUpTweet = require('../lib/utils');
 
 const argv = require('yargs').argv;
 
