@@ -826,10 +826,5 @@ fortune = [
     "The Computer Museum's auction has already sold a Gortex jacket distributed to the Apple Lisa computer development team for $250. \n- 94APR"
 ]
 
-
-def wwwtxt():
-
-    print(random.choice(fortune))
-    exit
-
-wwwtxt()
+print(random.choice(fortune))
+exit
